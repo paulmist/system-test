@@ -1,8 +1,8 @@
 function strstr(haystack, chunk){
 	if(haystack.indexOf(chunk)==-1){
-		return 'NO';
+		return 'Nope. Sorry. Not supported.';
 	}else{
-		return 'YES';
+		return 'Yep. Good to go!';
 	}
 }
 function randRange (min, max) {
@@ -78,36 +78,47 @@ $().ready(function(){
 	identInit();
 	if(strstr(pluginlist, "Flash")=='YES'){
 		if(flash_version!='undefined'){
-			var flash = 'YES ('+flash_version+')';
+			var flash = 'Yep. ('+flash_version+')';
 		}else{
-			var flash = 'YES';
+			var flash = 'Yep. Good to go!';
 		}
 	}else{
-		var flash = 'NO';
+		var flash = 'No. Sorry. Not supported.';
 	}
+	
 	$("#noJS").hide();
-	$("#theTable").show();
-	$("#theTable2").show();
+	//$("#theTable").show();
+	//$("#theTable2").show();
 	$("#test_resolution").html(screen.width+"x"+screen.height);
 	$("#itest_resolution").val(screen.width+"x"+screen.height);
+	
 	$("#test_flash").html(flash);
 	$("#itest_flash").val(flash);
+	
 	$("#test_media_player").html(strstr(pluginlist, "Windows Media Player"));
 	$("#itest_media_player").val(strstr(pluginlist, "Windows Media Player"));
+	
 	$("#test_java").html(strstr(pluginlist, "Java"));
 	$("#itest_java").val(strstr(pluginlist, "Java"));
+	
 	$("#test_shockwave").html(strstr(pluginlist, "Director"));
 	$("#itest_shockwave").val(strstr(pluginlist, "Director"));
+	
 	$("#test_real_player").html(strstr(pluginlist, "RealPlayer"));
 	$("#itest_real_player").val(strstr(pluginlist, "RealPlayer"));
+	
 	$("#test_quicktime").html(strstr(pluginlist, "QuickTime"));
 	$("#itest_quicktime").val(strstr(pluginlist, "QuickTime"));
+	
 	$("#test_acrobat").html(strstr(pluginlist, "Acrobat Reader"));
 	$("#itest_acrobat").val(strstr(pluginlist, "Acrobat Reader"));
+	
 	$("#test_svg").html(strstr(pluginlist, "SVG Viewer"));
 	$("#itest_svg").val(strstr(pluginlist, "SVG Viewer"));
+	
 	$("#test_browser").html(BrowserDetect.browser+" "+BrowserDetect.version);
 	$("#itest_browser").val(BrowserDetect.browser+" "+BrowserDetect.version);
+	
 	$("#test_os").html(os);
 	$("#itest_os").val(os);
 	//cookies
