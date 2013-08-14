@@ -1,0 +1,61 @@
+
+body, table, div{font-family:Verdana;font-size:11px;color:#000;}
+body{margin:0;padding:0;background:#E7E3E7  url("../images/backgrounds/main.jpg") repeat-x left top ;}
+
+a{font-weight:bold;}
+a:link, a:visited{color:#e53f1f;text-decoration:none;}
+a:hover, a:active{color:#000;text-decoration:underline;}
+
+a img{border:0;}
+
+#wrapper{width:800px;margin:0 auto;}
+#wrapper2{padding:20px;}
+#top_line{ height:40px;background:#d5d5d5;margin-bottom:15px;}
+
+
+#logo a{text-indent:-10000px;width:218px;height:88px;display:block;float:right;margin-right:10px;background:url("../images/front-logo.jpg") no-repeat;}
+#title{text-indent:-10000px;background:url("../images/front-title.jpg") no-repeat 0 10px;height:48px;padding-bottom:10px;}
+#form-container{margin-left:150px;}
+
+.narrow-center{width:300px;margin:0 auto;}
+
+
+td.speed_test a { display:block; float:left;  padding: 5px 20px; background-color: #C04646; color:#fff; }
+
+form input, form select, form textarea{width:350px;}
+form input.problem_types{display:inline;width:auto;}
+form label{display:block;margin-bottom:5px;}
+form label.normal{display:inline;font-weight:bold;}
+form textarea{height:100px;}
+form input.submit{background-color:#322244;border:1px solid #fff;color:#fff;font-size:14px;padding:6px auto;font-weight:bold;}
+
+.left2{float:left;width:300px;color:#C04646;font-size:24px;font-weight:bold;padding:5px 15px;}
+.right2{float:right;width:280px;}
+.left3{float:left;width:218px;}
+.right3{float:right;width:20px;margin:5px 10px 0 0;}
+
+.highlight{border:3px solid #e53f1f;margin-right:15px;}
+.error2{font-weight:bold;color:#e53f1f;}
+.clear{clear:both;}
+.green{color:#66ff66;}
+.bold{font-weight:bold;}
+.right{text-align:right;}
+
+.tabel{background-color:#ddd;}
+.tabel td{background-color:#FFF;}
+
+.tabel_form{text-align:center;margin:0 0 0 15px;color:#A8593A;}
+.tabel_form label{font-family:Verdana;font-size:11px;font-style:normal;font-weight:bold;}
+.tabel_form input{width:95%;}
+.tabel_form .submit{ width: auto;border-color: #CEC3D6 #ADA6BD #B5AAC6;   border-style: solid;   border-width: 1px;
+    background-color:#8C799C;
+    font-family:Verdana;
+    font-size:11px;
+    font-style:normal;
+    font-weight:bold;
+    color:white;
+    padding: 0 5px;
+    height: 27px;
+    }
+
+
