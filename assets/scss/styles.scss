@@ -1,4 +1,6 @@
-@import 'bourbon';
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
 @import "font-sizer";
 @import "normalize.css";
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
@@ -73,43 +75,121 @@ body {
 	color: #444;
 }
 section{
-	padding: 30px 40px;
+	@include outer-container;
+	padding: 30px 40px 0 40px;
 	margin-bottom: 30px;
 	background: #f5f5f5;
 
+	@media screen and (min-width:768px) {
+		padding: 30px 40px 0 40px;	
+		background: #f5f5f5;
+	}
+
 	article{
-		width: 100%;
-		margin: 0 1% 30px 1%;
-		padding: 10px 30px;
+		margin-bottom: 30px;
+		@include span-columns(12);
+		@include pad(10px 30px);
 		background:#fff;
-		//clear: both;
-		float:left;
+		
+		@media screen and (min-width: 768px){
+			@include span-columns(4);
 
-		@include box-sizing(border-box);
-
-		position: relative;
-
-		@media screen and (min-width: 768px) {
-			width: 31%;
-			&:nth-of-type(1){
-				clear:both;
+			&.remote{
+				@include span-columns(6);
 			}
-			&:nth-of-type(3n){
-				clear: none;
-				//float: right;
-				margin-right: 0;
+			&.detail{
+				@include span-columns(12)
 			}
 		}
-
 		span{
 			display: block;
 			margin-bottom: 20px;
 		}
+		&.speed-form-container{
+			
+			@media screen and (min-width: 768px) {
+				@include span-columns(8);
+			}
+		
+			.speed-form{
+				padding-bottom: 25px;
+				
+				.field{
+					@media screen and (min-width: 768px) {
+						@include span-columns(4 of 8);
+					}	
+				}
+			}
+		}
+	}
+}
+
+label{
+	margin-bottom: 10px;
+	//width: 40%;
+	font-family: 'novecento_widelight';
+	display: block;
+	@include font-size(16);
+	@media screen and (min-width: 768px) {
+		margin: 0 10px 10px 0;
+	}
+}
+input.text{
+	width: 40%;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	//@include fill-parent();
+	border: 1px solid #ccc;
+	background: #eee;
+}
+.detail{
+	.title{
+		@media screen and (min-width: 768px) {
+			@include span-columns(4);	
+		}
+	}
+
+	.form-fields{
+		
+		@media screen and (min-width: 768px) {
+			@include span-columns(8);
+			@include omega;	
+		}
+		
+		.field{
+			margin: 10px 0;
+
+			@media screen and (min-width: 768px) {
+				@include span-columns(4 of 8);
+			}
+
+			label{
+				margin-bottom: 10px;
+				display: block;
+			}
+			input.text{
+				display: block;
+				@include fill-parent;
+			}
+
+		}
+		&.submit-field{
+			@include span-columns(4);
+			float: right;
+
+			.field{
+				width: 100%;
+			}
+		}
+	}
+}
+.row{
+	@include row;
+	&.speed{
+		background: #fff;
 	}
 }
 h1{
-	//margin: 0 0 30px 0;
-	//margin: 0 30px 0 0;
 	margin-right: 30px;
 	font-family: 'novecento_widelight';
 	@include font-size(21);
@@ -118,9 +198,11 @@ h1{
 }
 .ident{
 	float: right;
-	//height: 3.125em;
-	//margin: -0.625em 0.9375em 0 0;
 	width: 90px;
+	display: none;
+	@media screen and (min-width: 400px) {
+		display: block;
+	}
 }
 .ident .block{
 	float: left;
@@ -131,6 +213,26 @@ i{
 	margin-right: 15px;
 	color: $light-green;
 	@include font-size(28);
+
+	&.icon-minus-sign{
+		color: red;
+	}
+}
+.btn,
+.submit{
+	width:100%;
+	line-height: 40px;
+	background: #00a2a0;
+	border: none;
+	font-family: 'novecento_widenormal';
+	@include font-size(16);
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	&:hover{
+		background: #307878;
+	}
 }
 /*=============================
 	HEADER
@@ -172,6 +274,7 @@ i{
 	margin: 30px auto 0 auto;
 	padding-bottom: 30px;
 }
+
 /*==========================
 	Helper classes
 ============================*/

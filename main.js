@@ -1,8 +1,8 @@
 function strstr(haystack, chunk){
 	if(haystack.indexOf(chunk)==-1){
-		return 'Nope. Sorry. Not supported.';
+		return '<i class="icon-minus-sign"></i>Sorry. Not supported.';
 	}else{
-		return 'Yep. Good to go!';
+		return 'Great. This is supported.';
 	}
 }
 function randRange (min, max) {
@@ -78,12 +78,12 @@ $().ready(function(){
 	identInit();
 	if(strstr(pluginlist, "Flash")=='YES'){
 		if(flash_version!='undefined'){
-			var flash = 'Yep. ('+flash_version+')';
+			var flash = 'Great. This is supported. ('+flash_version+')';
 		}else{
-			var flash = 'Yep. Good to go!';
+			var flash = 'Great. This is supported.';
 		}
 	}else{
-		var flash = 'No. Sorry. Not supported.';
+		var flash = '<i class="icon-minus-sign"></i>Sorry. Not supported.';
 	}
 	
 	$("#noJS").hide();
